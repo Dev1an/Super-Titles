@@ -1,6 +1,6 @@
 ![Superman logo](https://upload.wikimedia.org/wikipedia/commons/0/05/Superman_S_symbol.svg)
 
-This app is in development
+<p align=center>This app is in development</p>
 
 # Features
 
