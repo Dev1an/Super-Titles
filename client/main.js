@@ -6,12 +6,12 @@ import {addListNodes} from "prosemirror-schema-list"
 import {exampleSetup} from "prosemirror-example-setup"
 import {tableNodes, tableEditing} from 'prosemirror-tables'
 
-import 'prosemirror-tables/style/tables.css'
-
-import "prosemirror-menu/style/menu.css"
-import "prosemirror-view/style/prosemirror.css"
-import "prosemirror-example-setup/style/style.css"
+import 'prosemirror-view/style/prosemirror.css'
+import 'prosemirror-example-setup/style/style.css'
 // import "prosemirror-gapcursor/style/gapcursor.css"
+
+import './menubar.css'
+import './table.css'
 
 // import './title'
 
@@ -65,7 +65,7 @@ window.onload = function() {
         state: EditorState.create({
             doc: textDocument,
             plugins: [
-                ...exampleSetup({schema: mySchema}),
+                ...exampleSetup({schema: mySchema, floatingMenu: false}),
                 tableEditing()
             ]
         })

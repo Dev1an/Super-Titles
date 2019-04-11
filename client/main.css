@@ -1,4 +1,17 @@
+html {
+  background: black;
+  color: aliceblue;
+}
+
 body {
   padding: 10px;
   font-family: sans-serif;
+}
+
+.ProseMirror {
+  padding: 1em;
+}
+
+.ProseMirror:focus {
+  outline-style: none;
 }
