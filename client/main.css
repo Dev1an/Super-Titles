@@ -1,6 +1,6 @@
 html {
   background: black;
-  color: aliceblue;
+  color: rgb(201, 201, 201);
 }
 
 body {
@@ -14,4 +14,13 @@ body {
 
 .ProseMirror:focus {
   outline-style: none;
+}
+
+tr.supertitle td.supertitle {
+  padding-left: 1em;
+  color: white
+}
+
+.supertitle p {
+  margin: 0;
 }
