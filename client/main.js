@@ -5,7 +5,7 @@ import {nodes as basicNodes, marks as basicMarks} from 'prosemirror-schema-basic
 import {exampleSetup} from 'prosemirror-example-setup'
 import {tableNodes, tableEditing} from 'prosemirror-tables'
 import {keymap} from 'prosemirror-keymap'
-import {splitBlock} from "prosemirror-commands"
+import {newlineInCode, createParagraphNear, liftEmptyBlock, splitBlock} from "prosemirror-commands"
 
 
 import 'prosemirror-view/style/prosemirror.css'
@@ -79,6 +79,12 @@ window.onload = function() {
 			plugins: [
 				...exampleSetup({schema: mySchema, floatingMenu: false}),
 				tableEditing(),
+				keymap({
+					'Ctrl-1': newlineInCode,
+					'Ctrl-2': createParagraphNear,
+					'Ctrl-3': liftEmptyBlock,
+					'Ctrl-4': splitBlock
+				})
 			]
 		})
 	})
